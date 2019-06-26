@@ -1,0 +1,38 @@
+{
+  "name": "my-project",
+  "version": "1.0.0",
+  "description": "default project files",
+  "main": "webpack.config.js",
+  "dependencies": {
+    "@babel/core": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
+    "babel": "^6.23.0",
+    "babel-loader": "^8.0.6",
+    "css-loader": "^3.0.0",
+    "eslint": "^5.15.1",
+    "eslint-loader": "^2.1.2",
+    "eslint-plugin-import": "^2.18.0",
+    "style-loader": "^0.23.1",
+    "url-loader": "^2.0.1"
+  },
+  "devDependencies": {
+    "webpack": "^4.35.0",
+    "webpack-cli": "^3.3.5",
+    "webpack-dev-server": "^3.7.2"
+  },
+  "scripts": {
+    "dev": "webpack-dev-server --hot",
+    "production": "./node_modules/.bin/webpack -p --optimize-minimize",
+    "bundle": "./node_modules/.bin/webpack --hide-modules --colors --mode=none"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/taeuk-gang/my-project.git"
+  },
+  "author": "taeuk.kang",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/taeuk-gang/my-project/issues"
+  },
+  "homepage": "https://github.com/taeuk-gang/my-project#readme"
+}
