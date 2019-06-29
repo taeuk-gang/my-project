@@ -5,9 +5,8 @@ module.exports = {
 		"main-bundle": `./src/main.js`,
 	},
 	output: {
-		path: path.resolve(__dirname, `public`),
+		path: path.resolve(__dirname, `./src/public`),
 		filename: `[name].js`,
-		publicPath: `/src/`,
 	},
 	module: {
 		rules: [
@@ -53,13 +52,14 @@ module.exports = {
 		],
 	},	
 	devServer: {
-		hot: true,
-		contentBase: path.join(__dirname, `public`),
-		compress: true,
-		port: 9000,
-		disableHostCheck: true,
-		host: `0.0.0.0`,
-		historyApiFallback: true,
+		hot : true,
+		contentBase: path.join(__dirname, `src/public`),
 		watchContentBase: true,
+		historyApiFallback: true,
+		compress: true,
+		host: `0.0.0.0`,
+		disableHostCheck: true,
+		port: 9000,
 	},
+	devtool: `inline-source-map`,
 }
