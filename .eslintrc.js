@@ -8,7 +8,7 @@ module.exports = {
     },
 
     "parserOptions": {
-        "ecmaVersion": 6,
+        "ecmaVersion": 2019,
         "sourceType": `module`
     },
 
@@ -52,7 +52,6 @@ module.exports = {
         "prefer-arrow-callback": 1,
         "prefer-const": 1,
         "prefer-numeric-literals": 1,
-        "prefer-rest-params": 1,
         "prefer-spread": 1,
         "prefer-template": 1
     },
