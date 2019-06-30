@@ -1,7 +1,7 @@
 import { html } from 'lit-html'
 
 import LitRender from '../libs/litRender'
-import store from '../libs/store'
+// import store from '../libs/store'
 import {
 	add
 } from '../libs/actions'
