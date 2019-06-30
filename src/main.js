@@ -1,3 +1,3 @@
-import "../node_modules/@webcomponents/webcomponentsjs/webcomponents-bundle.js"
+import './components/App.js'
 
 console.info(`main script start!`)
