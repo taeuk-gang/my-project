@@ -5,25 +5,33 @@
   "main": "webpack.config.js",
   "dependencies": {
     "@babel/core": "^7.4.5",
+    "@babel/plugin-transform-runtime": "^7.4.4",
     "@babel/preset-env": "^7.4.5",
+    "@webcomponents/webcomponentsjs": "^2.2.10",
     "babel": "^6.23.0",
     "babel-loader": "^8.0.6",
+    "babel-polyfill": "^6.26.0",
     "css-loader": "^3.0.0",
+    "custom-elements-es5-adapter": "^1.0.0",
     "eslint": "^5.15.1",
     "eslint-loader": "^2.1.2",
     "eslint-plugin-import": "^2.18.0",
+    "lit-html": "^1.1.0",
+    "redux-zero": "^5.0.4",
     "style-loader": "^0.23.1",
     "url-loader": "^2.0.1"
   },
   "devDependencies": {
+    "@babel/runtime": "^7.4.5",
     "webpack": "^4.35.0",
     "webpack-cli": "^3.3.5",
     "webpack-dev-server": "^3.7.2"
   },
   "scripts": {
-    "dev": "webpack-dev-server --hot",
+    "dev": "./node_modules/.bin/webpack-dev-server --hot",
     "production": "./node_modules/.bin/webpack -p --optimize-minimize",
-    "bundle": "./node_modules/.bin/webpack --hide-modules --colors --mode=none"
+    "bundle": "./node_modules/.bin/webpack --hide-modules --colors --mode=none",
+    "watch": "./node_modules/.bin/webpack --hide-modules --colors --mode=none --watch"
   },
   "repository": {
     "type": "git",
