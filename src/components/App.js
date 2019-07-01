@@ -22,13 +22,25 @@ class AppMain extends LitRender(HTMLElement) {
 	}
 
 	render() {
-		return html`
-            
-            <section>
-            	<exam-element></exam-element>
-            </section>
+		return html` 
+		${style}           
+		<main>
+			<exam-element></exam-element>
+		</main>
         `
 	}
 }
+
+const style = html`
+<style>
+ main {
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+ }
+</style>
+`
 
 customElements.define(`app-main`, AppMain)

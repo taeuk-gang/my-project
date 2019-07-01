@@ -8,6 +8,17 @@ function actionCreator(action) {
 	}
 }
 
+// ===================================================== My Function
+
+export const countAdd = actionCreator(state => {
+	state.info.count === undefined
+		? state.info.count = 0
+		: state.info.count++
+	return state
+})
+
+// ===================================================== Example
+
 export const route = actionCreator((state, route) => {
 	state.route = route
 
