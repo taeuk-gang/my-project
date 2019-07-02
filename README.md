@@ -1,9 +1,32 @@
 # my-project
 
 ## :memo: 요약
+
 > 나의 기본이 되는 프로젝트 구조 설정
 
-
+> #### 목표
+>
+> - [x] 프로젝트 구조 설정
+> - [x] Lit-html 프로젝트 사용
+> - [x] 일관성 있는 Commit 메세지 작성
+> - [x] Storybook.js를 이용한 UI 테스트 모델 환경 구성
+> - [x] ESLint 엄격한 사용 (Complexity와 CodeQuaility 관리) 
+>   - [ ] 모든 설정 번역 하기(아직 1/4 진행...)
+> - [x] Webpack 사용
+> - [x] Web-dev-server 사용
+>   - [ ] 나중에 도메인 연결시 Proxy 설정
+> - [x] Git pages 기능 사용
+> - [ ] 커스텀 엘리먼트 + Proxy() 를 이용한 가상 엘리먼트 VanilaJS 프로젝트 구성
+> - [ ] 자동 배포 환경 구축 - Travis CI (서버가 필요없는 CI 환경 구성)
+> - [ ] Docker 사용
+> - [ ] 쿠버네틱스가 사용 가능한가?
+> - [ ] 브라우저 호환성 검사하기 - [참고사이트](https://caniuse.com/#feat=shadowdomv1)
+> - [ ] README.MD에 FlowChart, Mermaid 사용하기
+> - [ ] 라우팅 관리하기 - [참고사이트](https://poiemaweb.com/js-spa)
+> - [ ] SOP 회피하기 - CROS 고려 - [Heroku로 프록시 우회 서버 만들기](https://github.com/Rob--W/cors-anywhere)
+> - [ ] 원격 DB 사용 - Firebase
+> - [ ] 서버리스 프로그래밍하기 - Google Cloud Functions
+> - [ ] 
 
 ## :mag: 참고자료
 
@@ -25,3 +48,10 @@
 
 - [Webpack 설정 및 webpack-dev-server](https://www.daleseo.com/webpack-development/)
 
+- [브라우저 호환성 검사 사이트](https://caniuse.com/#feat=shadowdomv1)
+
+- [웹 개발자 로드맵 - 항상 신기술 체크](https://github.com/devJang/developer-roadmap)
+
+- [바벨 설정](https://babeljs.io/docs/en/babel-register)
+
+ㅇ
