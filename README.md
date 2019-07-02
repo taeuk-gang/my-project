@@ -26,7 +26,6 @@
 > - [ ] SOP 회피하기 - CROS 고려 - [Heroku로 프록시 우회 서버 만들기](https://github.com/Rob--W/cors-anywhere)
 > - [ ] 원격 DB 사용 - Firebase
 > - [ ] 서버리스 프로그래밍하기 - Google Cloud Functions
-> - [ ] 
 
 ## :mag: 참고자료
 
@@ -53,5 +52,3 @@
 - [웹 개발자 로드맵 - 항상 신기술 체크](https://github.com/devJang/developer-roadmap)
 
 - [바벨 설정](https://babeljs.io/docs/en/babel-register)
-
-ㅇ
