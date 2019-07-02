@@ -33,13 +33,14 @@ class AppMain extends LitRender(HTMLElement) {
 
 const style = html`
 <style>
- main {
+main {
 	display: flex;
     justify-content: center;
     align-items: center;
-    width: 100vw;
-    height: 100vh;
- }
+    width: 95vw;
+	height: 95vh;
+	margin: auto;
+}
 </style>
 `
 
