@@ -4,8 +4,8 @@ node_modules
 .env
 .eslintcache
 .npm
-main-bundle.js
-*-bundle.js
+# main-bundle.js
+# *-bundle.js
 
 # build
 dist/
