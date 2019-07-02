@@ -19,8 +19,8 @@ export const countAdd = actionCreator(state => {
 
 // ===================================================== Example
 
-export const route = actionCreator((state, route) => {
-	state.route = route
+export const route = actionCreator((state, _route) => {
+	state.route = _route
 
 	return state
 })
@@ -30,10 +30,10 @@ export const add = actionCreator((state, todo) => {
 		title: todo,
 		completed: false,
 		id: `item-xxxxxxxxxxxx`.replace(/[x]/g, () => {
-			const r = (Math.random() * 16) | 0
+			const r = Math.random() * 16 | 0
 
 			return r.toString(16)
-		})
+		}),
 	})
 
 	return state
@@ -46,21 +46,23 @@ export const remove = actionCreator((state, id) => {
 })
 
 export const toggle = actionCreator((state, id) => {
-	const todo = state.todoList.find(todo => todo.id === id)
+	const todo = state.todoList.find(_todo => _todo.id === id)
 	todo.completed = !todo.completed
 
 	return state
 })
 
 export const replace = actionCreator((state, id, title) => {
-	const todo = state.todoList.find(todo => todo.id === id)
+	const todo = state.todoList.find(_todo => _todo.id === id)
 	todo.title = title
 
 	return state
 })
 
 export const toggleAll = actionCreator((state, completed) => {
-	state.todoList.forEach(todo => (todo.completed = completed))
+	state.todoList.forEach(_todo => {
+		_todo.completed = completed
+	})
 
 	return state
 })

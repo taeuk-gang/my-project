@@ -3,7 +3,7 @@ import { html } from 'lit-html'
 import LitRender from '../libs/litRender'
 // import store from '../libs/store'
 import {
-	add
+	add,
 } from '../libs/actions'
 
 import './exam-element'
@@ -25,7 +25,7 @@ class AppMain extends LitRender(HTMLElement) {
 		return html` 
 		${style}           
 		<main>
-			<exam-element></exam-element>
+			<exam-element />
 		</main>
         `
 	}
