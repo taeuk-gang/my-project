@@ -4,6 +4,8 @@ import LitRender from '../libs/litRender'
 import store from '../libs/store'
 import { countAdd } from '../libs/actions'
 
+import './two-way-binding.js'
+
 class ExamElement extends LitRender(HTMLElement) {
 	constructor() {
 		super()
@@ -38,7 +40,9 @@ class ExamElement extends LitRender(HTMLElement) {
 	render() {
 		return html`
     	${style}
-    	<div class="exam-element"></div>
+    	<div class="exam-element">
+			<two-way-binding />
+		</div>
     	`
 	}
 }
