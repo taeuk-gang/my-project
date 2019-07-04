@@ -1,7 +1,6 @@
 # my-project
 
 ## :memo: 요약
-
 > 나의 기본이 되는 프로젝트 구조 설정
 
 > #### 목표
@@ -26,6 +25,8 @@
 > - [ ] SOP 회피하기 - CROS 고려 - [Heroku로 프록시 우회 서버 만들기](https://github.com/Rob--W/cors-anywhere)
 > - [ ] 원격 DB 사용 - Firebase
 > - [ ] 서버리스 프로그래밍하기 - Google Cloud Functions
+> - [ ] 오픈소스로 만들 것 (오픈소스에 대한 이해 필요) - [참고](https://janelia-flyem.github.io/licenses.html)
+> - [ ] 문서화 양식 제작
 
 ## :mag: 참고자료
 
