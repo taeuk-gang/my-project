@@ -1,8 +1,6 @@
 import { html } from 'lit-html'
 
 import LitRender from '../libs/litRender'
-import store from '../libs/store'
-import { countAdd } from '../libs/actions'
 import Model from '../libs/model-two-way-bind.js'
 
 class TwoWayBinding extends LitRender(HTMLElement) {
@@ -19,24 +17,12 @@ class TwoWayBinding extends LitRender(HTMLElement) {
 	}
 
 	connectedCallback() {
-		const root = this.shadowRoot
-		const handlers = this._handlers
-
-		handlers.onClick = this._onClick.bind(this)
-		
-		root.addEventListener(`click`, handlers.onClick)		
+		// const root = this.shadowRoot
+		// const handlers = this._handlers	
 	}
 
 	disconnectedCallback() {
-		const root = this.shadowRoot
-
-		root.removeEventListener(`click`, this._handlers.onClick)
-	}
-
-	_onClick() {
-		console.info(`before: `, store.getState().info)
-		countAdd()
-		console.info(`after: `, store.getState().info)
+		// const root = this.shadowRoot
 	}
 
 	twoWayBind() {		

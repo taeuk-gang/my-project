@@ -20,7 +20,7 @@ class ExamElement extends LitRender(HTMLElement) {
 		const root = this.shadowRoot
 		const handlers = this._handlers
 
-		handlers.onClick = this._onClick.bind(this)
+		handlers.onClick = this._onClick.bind(this)				
 		
 		root.addEventListener(`click`, handlers.onClick)		
 	}
@@ -32,15 +32,15 @@ class ExamElement extends LitRender(HTMLElement) {
 	}
 
 	_onClick() {
-		console.info(`before: `, store.getState().info)
 		countAdd()
-		console.info(`after: `, store.getState().info)
+		this.invalidate(true)
 	}
 
 	render() {
 		return html`
     	${style}
     	<div class="exam-element">
+			<span>TEST: ${store.getState().info.count}</span>
 			<two-way-binding />
 		</div>
     	`
@@ -50,11 +50,13 @@ class ExamElement extends LitRender(HTMLElement) {
 const style = html`
   <style>
     .exam-element {
-      display: block;
-      width: 300px;
-      height: 100px;
-      border: 1px solid black;
-	  background-color: #EEEEEE;
+		display: grid;
+		grid-auto-rows: auto auto;
+		height: auto;
+		width: 300px;
+		height: 100px;
+		border: 1px solid black;
+		background-color: #EEEEEE;
     }
   </style>
 `
