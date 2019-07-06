@@ -30,8 +30,7 @@
 > - [ ] 오픈소스로 만들 것 (오픈소스에 대한 이해 필요) - [참고](https://janelia-flyem.github.io/licenses.html)
 > - [ ] 문서화 양식 제작
 
-## :mag: 참고자료
-
+- [코드 퀼리티 검사 사이트](https://codebeat.co/projects/github-com-taeuk-gang-my-project-master)
 - [프로젝트 구조](https://joshua1988.github.io/web-development/vuejs/vue-structure/)
 - [깃관련 명령 모음](https://github.com/mingrammer/git-tips/blob/master/README.md#%EC%B6%A9%EB%8F%8C%EB%90%9C-%EB%AA%A8%EB%93%A0-%ED%8C%8C%EC%9D%BC-%EB%82%98%EC%97%B4%ED%95%98%EA%B8%B0)
 - [웹 컴포넌트 - lit-html](https://kyu.io/%EC%9B%B9-%EC%BB%B4%ED%8F%AC%EB%84%8C%ED%8A%B85%e2%80%8a-%e2%80%8alit-html%EB%A1%9C-%EB%A6%AC%EC%97%91%ED%8A%B8%EC%B2%98%EB%9F%BC-%EC%BD%94%EB%94%A9%ED%95%98%EA%B8%B0/)
