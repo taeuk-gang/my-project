@@ -15,4 +15,4 @@ matrix:
       before_script:
         - npm run bundle
       script:
-        - wct -s 'Linux/chrome@latest' --npm; fi
+        - wct -l chrome --npm; fi
