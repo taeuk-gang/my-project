@@ -15,4 +15,4 @@ matrix:
       before_script:
         - npm run bundle
       script:
-        - wtc -s 'Linux/chrome@62' --npm
+        - ./node_modules/.bin/wtc -s 'Linux/chrome' --npm
