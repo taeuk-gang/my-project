@@ -15,4 +15,4 @@ matrix:
       before_script:
         - npm run bundle
       script:
-        - if [ "${TRAVIS_PULL_REQUEST}" = "false" ]; then wct -s 'Linux/chrome@41' --npm; fi
+        - wct -s 'Linux/chrome@latest' --npm; fi
