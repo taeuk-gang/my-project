@@ -53,6 +53,7 @@
     "dev": "./node_modules/.bin/webpack-dev-server --hot",
     "production": "./node_modules/.bin/webpack -p --optimize-minimize",
     "bundle": "./node_modules/.bin/webpack --hide-modules --colors --mode=none",
+    "deploy": "cp -rf ./index.html ./server && cp -rf ./main-bundle.js ./server/ && cp -rf ./modules-bundle.js ./server && cp -rf ./index.css ./server && cp -rf ./src/css ./server/src/css/",
     "watch": "./node_modules/.bin/webpack --hide-modules --colors --mode=none --watch",
     "storybook": "./node_modules/.bin/start-storybook -p 9001",
     "build-storybook": "./node_modules/.bin/build-storybook",

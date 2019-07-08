@@ -24,10 +24,10 @@
 > - [ ] 쿠버네틱스가 사용 가능한가?
 > - [x] 브라우저 호환성 검사하기 - [참고사이트](https://caniuse.com/#feat=shadowdomv1)
 > - [ ] README.MD에 FlowChart, Mermaid 사용하기
-> - [ ] 라우팅 관리하기 - [참고사이트](https://poiemaweb.com/js-spa)
+> - [ ] 라우팅 관리하기 - [참고사이트](https://poiemaweb.com/js-spa) -필수(2)
 > - [ ] SOP 회피하기 - CROS 고려 - [Heroku로 프록시 우회 서버 만들기](https://github.com/Rob--W/cors-anywhere)
-> - [ ] 원격 DB 사용 - Firebase
-> - [ ] 서버리스 프로그래밍하기 - Google Cloud Functions
+> - [ ] 원격 DB 사용 - Firebase -필수(3)
+> - [ ] 서버리스 프로그래밍하기 - Google Cloud Functions -필수(1)
 > - [ ] 오픈소스로 만들 것 (오픈소스에 대한 이해 필요) - [참고](https://janelia-flyem.github.io/licenses.html)
 > - [x] 문서화 양식 제작
 > - [ ] FE 가이드를 참고하기

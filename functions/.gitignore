@@ -10,5 +10,3 @@ node_modules
 # build
 dist/
 zip/
-server/
-*.cache
