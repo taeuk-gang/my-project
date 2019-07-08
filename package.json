@@ -58,7 +58,6 @@
     "build-storybook": "./node_modules/.bin/build-storybook",
     "lint": "eslint ./src/",
     "autoprefixer": "./node_modules/.bin/postcss ./src/css/*.css -r postcss.config.js",
-    "format": "clang-format --version; find src test | grep '\\.js$\\|\\.ts$' | xargs clang-format --style=file -i",
     "test-detail": "npm run bundle && npm run lint && wct -p --npm",
     "test": "wct -l chrome --npm",
     "test2": "./node_modules/.bin/mocha test/*.js --recursive -w -r jsdom-global/register",
