@@ -13,7 +13,11 @@ matrix:
   include:
     - env: JOB=test
       before_script:
+<<<<<<< HEAD
         - npm run bundle
+=======
+        - npm run build
+>>>>>>> 06065fd1bdc623cb141826948f9def7b3e6051f7
       script:
         - xvfb-run wct --npm
         - if [ "${TRAVIS_PULL_REQUEST}" = "false" ]; then wct -l chrome --npm; fi
