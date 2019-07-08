@@ -6,7 +6,7 @@ import {
 	add,
 } from '../libs/actions'
 
-import './exam-element'
+import './exam-element.js'
 
 class AppMain extends LitRender(HTMLElement) {
 	constructor() {
@@ -23,7 +23,8 @@ class AppMain extends LitRender(HTMLElement) {
 
 	render() {
 		return html` 
-		${style}           
+		<!-- ${style}         -->
+		<link rel="stylesheet" type="text/css" href="./src/css/App.css">
 		<main>
 			<exam-element />			
 		</main>

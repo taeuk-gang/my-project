@@ -4,9 +4,7 @@ import LitRender from '../libs/litRender'
 import store from '../libs/store'
 import { countAdd } from '../libs/actions'
 
-import './two-way-binding.js'
-
-class ExamElement extends LitRender(HTMLElement) {
+export class ExamElement extends LitRender(HTMLElement) {
 	constructor() {
 		super()
 
@@ -38,10 +36,10 @@ class ExamElement extends LitRender(HTMLElement) {
 
 	render() {
 		return html`
-    	${style}
+		<!-- ${style} -->
+		<link rel="stylesheet" type="text/css" href="./src/css/exam-element.css">
     	<div class="exam-element">
-			<span>TEST: ${store.getState().info.count}</span>
-			<two-way-binding />
+			<span class="test-btn">TEST: ${store.getState().info.count}</span>
 		</div>
     	`
 	}
@@ -53,10 +51,14 @@ const style = html`
 		display: grid;
 		grid-auto-rows: auto auto;
 		height: auto;
-		width: 300px;
-		border: 1px solid black;
+		width: 300px;	
 		background-color: #EEEEEE;
-    }
+	}
+	
+	.test-btn {
+		border: 1px solid black;
+    	border-bottom: 0;
+	}
   </style>
 `
 

@@ -1,0 +1,13 @@
+.exam-element {
+    display: -ms-grid;
+    display: grid;
+    grid-auto-rows: auto auto;
+    height: auto;
+    width: 300px;	
+    background-color: #EEEEEE;
+}
+
+.test-btn {
+    border: 1px solid black;
+    border-bottom: 0;
+}

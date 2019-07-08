@@ -50,8 +50,9 @@ class TwoWayBinding extends LitRender(HTMLElement) {
 
 	render() {
 		const { hours, minutes, seconds } = this.model
-		return html`
-    	${style}
+		return html`		
+		<!-- ${style} -->
+		<link rel="stylesheet" type="text/css" href="./src/css/two-way-binding.css">
     	<div class="two-way-binding">
 			${hours} : ${minutes} : ${seconds}
 		</div>

@@ -2,24 +2,21 @@ const path = require(`path`)
 
 module.exports = {
 	entry: {
-		"main-bundle": `./src/main.js`,
+		"main-bundle": [`./src/main.js`],
 	},
 	output: {
-		path: path.resolve(__dirname, `./docs`),
+		path: path.resolve(__dirname, `./`),
 		filename: `[name].js`,
 	},
 	module: {
 		rules: [
 			{
 				test: /\.m?js$/,
-				exclude: /(node_modules|bower_components)/,
+				exclude: /(node_modules|bower_components)\/(?!(lit-html))/,
 				use: {
 					loader: `babel-loader`,
 					options: {
 						presets: [`@babel/preset-env`],
-						plugins: [
-							[`@babel/transform-runtime`],
-						],
 					},
 				},
 			},
@@ -30,10 +27,7 @@ module.exports = {
 			},
 			{
 				test: /\.css$/,
-				use: [
-					`style-loader`,
-					`css-loader`,
-				],
+				use: [`style-loader`, `css-loader`, `postcss-loader`],
 			},
 			{
 				test: /\.(png|svg|jpe?g|gif)$/,
@@ -56,7 +50,7 @@ module.exports = {
 	},	
 	devServer: {
 		hot : true,
-		contentBase: path.join(__dirname, `/docs`),
+		contentBase: path.join(__dirname, `/`),
 		watchContentBase: true,
 		historyApiFallback: true,
 		compress: true,
