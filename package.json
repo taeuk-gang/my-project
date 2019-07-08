@@ -58,7 +58,7 @@
     "autoprefixer": "./node_modules/.bin/postcss ./src/css/*.css -r postcss.config.js",
     "test-detail": "npm run bundle && npm run lint && wct -p --npm",
     "test": "wct -l chrome --npm",
-    "test4": "wtc -s 'Linux/chrome@stable' --npm",
+    "test4": "wct -s 'Linux/chrome@stable' --npm",
     "test2": "./node_modules/.bin/mocha test/*.js --recursive -w -r jsdom-global/register",
     "test3": "./node_modules/.bin/mocha test/*.js -r @babel/register -r babel-polyfill -r esm -r jsdom-global/register -r jsdom -r jsdom-global -r custom-elements-es5-adapter -r @webcomponents/webcomponentsjs"
   },
