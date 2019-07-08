@@ -36,7 +36,6 @@ export class ExamElement extends LitRender(HTMLElement) {
 
 	render() {
 		return html`
-		<!-- ${style} -->
 		<link rel="stylesheet" type="text/css" href="./src/css/exam-element.css">
     	<div class="exam-element">
 			<span class="test-btn">TEST: ${store.getState().info.count}</span>
@@ -44,22 +43,5 @@ export class ExamElement extends LitRender(HTMLElement) {
     	`
 	}
 }
-
-const style = html`
-  <style>
-    .exam-element {
-		display: grid;
-		grid-auto-rows: auto auto;
-		height: auto;
-		width: 300px;	
-		background-color: #EEEEEE;
-	}
-	
-	.test-btn {
-		border: 1px solid black;
-    	border-bottom: 0;
-	}
-  </style>
-`
 
 customElements.define(`exam-element`, ExamElement)
