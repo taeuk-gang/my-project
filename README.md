@@ -1,6 +1,6 @@
 # 태욱이의 프로젝트 템플릿
 
-[![Build Status](https://travis-ci.org/taeuk-gang/my-project.svg?branch=master)](https://travis-ci.org/taeuk-gang/my-project) [![codebeat badge](https://codebeat.co/badges/fa88fd81-fc65-45a7-8618-d3314ef87c21)](https://codebeat.co/projects/github-com-taeuk-gang-my-project-master) ![GitHub](https://img.shields.io/github/license/taeuk-gang/taeuk-template.svg)![GitHub closed pull requests](https://img.shields.io/github/issues-pr-closed/taeuk-gang/taeuk-template.svg) ![GitHub package.json version](https://img.shields.io/github/package-json/v/taeuk-gang/taeuk-template.svg)
+[![Build Status](https://travis-ci.org/taeuk-gang/my-project.svg?branch=master)](https://travis-ci.org/taeuk-gang/my-project) [![codebeat badge](https://codebeat.co/badges/fa88fd81-fc65-45a7-8618-d3314ef87c21)](https://codebeat.co/projects/github-com-taeuk-gang-my-project-master) ![GitHub](https://img.shields.io/github/license/taeuk-gang/taeuk-template.svg) ![GitHub closed pull requests](https://img.shields.io/github/issues-pr-closed/taeuk-gang/taeuk-template.svg) ![GitHub package.json version](https://img.shields.io/github/package-json/v/taeuk-gang/taeuk-template.svg)
 
 ## :memo: 요약
 > 나의 기본이 되는 프로젝트 구조 설정
