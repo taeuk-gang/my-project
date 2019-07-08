@@ -16,4 +16,4 @@ matrix:
         - npm run bundle
       script:
         - xvfb-run wct --npm
-        - if [ "${TRAVIS_PULL_REQUEST}" = "false" ]; then wct -l chrome --npm; fi
+        - if [ "${TRAVIS_PULL_REQUEST}" = "false" ]; then wct -s 'Linux/chrome@41' --npm; fi
