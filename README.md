@@ -1,5 +1,7 @@
 # 태욱이의 프로젝트 템플릿
 
+[![Build Status](https://travis-ci.org/taeuk-gang/my-project.svg?branch=master)](https://travis-ci.org/taeuk-gang/my-project)
+
 ## :memo: 요약
 > 나의 기본이 되는 프로젝트 구조 설정
 
