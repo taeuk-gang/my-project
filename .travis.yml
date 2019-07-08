@@ -15,4 +15,4 @@ matrix:
       before_script:
         - npm run bundle
       script:
-        - npm test; fi
+        - npm test
