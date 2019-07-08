@@ -1,6 +1,6 @@
 # 태욱이의 프로젝트 템플릿
 
-[![Build Status](https://travis-ci.org/taeuk-gang/my-project.svg?branch=master)](https://travis-ci.org/taeuk-gang/my-project)
+[![Build Status](https://travis-ci.org/taeuk-gang/my-project.svg?branch=master)](https://travis-ci.org/taeuk-gang/my-project) [![codebeat badge](https://codebeat.co/badges/fa88fd81-fc65-45a7-8618-d3314ef87c21)](https://codebeat.co/projects/github-com-taeuk-gang-my-project-master)
 
 ## :memo: 요약
 > 나의 기본이 되는 프로젝트 구조 설정
@@ -19,14 +19,15 @@
 > - [x] Git pages 기능 사용
 > - [x] 커스텀 엘리먼트 + Proxy() 를 이용한 가상 엘리먼트 VanilaJS 프로젝트 구성
 >   - [참고1](https://dev-momo.tistory.com/entry/javascript-ES6-Proxy), [참고2](https://stackblitz.com/edit/2-way-bind-exapmle?file=index.js), [참고3](https://meetup.toast.com/posts/158)
-> - [x] 자동 배포 환경 구축 - Travis CI (서버가 필요없는 CI 환경 구성)
+> - [x] 자동 배포 및 빌드 환경 구축 - Travis CI (서버가 필요없는 CI 환경 구성)
 > - [ ] Docker 사용
 > - [ ] 쿠버네틱스가 사용 가능한가?
 > - [x] 브라우저 호환성 검사하기 - [참고사이트](https://caniuse.com/#feat=shadowdomv1)
-> - [ ] README.MD에 FlowChart, Mermaid 사용하기
+> - [x] README.MD에 FlowChart, Mermaid 사용하기 - [참고](https://baemincheon.tistory.com/29)
 > - [ ] 라우팅 관리하기 - [참고사이트](https://poiemaweb.com/js-spa) -필수(2)
 > - [ ] SOP 회피하기 - CROS 고려 - [Heroku로 프록시 우회 서버 만들기](https://github.com/Rob--W/cors-anywhere)
 > - [x] 원격 DB 사용 - Firebase -필수(3)
+>   - [ ] Security rule 짜기
 > - [x] 서버리스 프로그래밍하기 - Google Cloud Functions -필수(1)
 > - [ ] 오픈소스로 만들 것 (오픈소스에 대한 이해 필요) - [참고](https://janelia-flyem.github.io/licenses.html)
 > - [x] 문서화 양식 제작
@@ -34,7 +35,6 @@
 > - [ ] Clean code -javascript 참고하기
 > - [ ] Toast UI 가이드 참고하기
 > - [x] PostCss - Autoprefixer 연결하기
-> - [ ] 
 
 
 
