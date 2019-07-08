@@ -3,7 +3,7 @@ import { html } from 'lit-html'
 import LitRender from '../libs/litRender'
 // import store from '../libs/store'
 import {
-	add,
+	getData,
 } from '../libs/actions'
 
 import './exam-element.js'
@@ -17,8 +17,12 @@ class AppMain extends LitRender(HTMLElement) {
 		this.invalidate()
 	}
 
-	add(title) {
-		add(title)
+	connectedCallback() {
+		this.getData()
+	}
+
+	getData() {
+		getData()
 	}
 
 	render() {

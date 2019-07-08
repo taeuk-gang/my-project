@@ -17,6 +17,18 @@ export const countAdd = actionCreator(state => {
 	return state
 })
 
+export const getData = actionCreator(state => {
+	const db = firebase.firestore()
+
+	db.collection(`TEST`).get().then(querySnapshot => {
+		querySnapshot.forEach(doc => {
+			console.info(doc.id, doc.data())
+		})
+	})
+	
+	return state
+})
+
 // ===================================================== Example
 
 export const route = actionCreator((state, _route) => {

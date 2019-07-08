@@ -271,5 +271,6 @@ module.exports = {
     // allow global variables
     "globals": {
         "chrome": true,
+        "firebase": true,
     }
 };
