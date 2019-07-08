@@ -1,2 +1,4 @@
 main-bundle.js
+modules-bundle.js
+*-bundle.js
 redux-zero.js
