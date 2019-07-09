@@ -56,7 +56,7 @@
     "bundle": "./node_modules/.bin/webpack --hide-modules --colors --mode=none",
     "deploy": "rm -rf ./server/* && cp -rf ./index.html ./server && cp -rf ./main-bundle.js ./server/ && cp -rf ./index.css ./server && cd server && mkdir src && cd src && cd ../../ && cp -rf ./src/css ./server/src/",
     "watch": "./node_modules/.bin/webpack --hide-modules --colors --mode=none --watch",
-    "storybook": "./node_modules/.bin/start-storybook -p 9001",
+    "storybook": "./node_modules/.bin/start-storybook -p 9001 -s ./",
     "build-storybook": "./node_modules/.bin/build-storybook",
     "lint": "eslint ./src/",
     "autoprefixer": "./node_modules/.bin/postcss ./src/css/*.css -r postcss.config.js",

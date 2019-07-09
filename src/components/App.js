@@ -29,7 +29,7 @@ class AppMain extends LitRender(HTMLElement) {
 		return html` 
 		${style}
 		<main>
-			<login-form />		
+			<login-form />
 		</main>
         `
 	}
