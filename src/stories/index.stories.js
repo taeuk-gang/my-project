@@ -5,6 +5,7 @@ import '../components/App.js'
 storiesOf(`App`, module)
 	.add(`app-main`, () => `<app-main></app-main>`)
 	.add(`exam-element`, () => `<exam-element></exam-element>`)
+	.add(`login-form`, () => `<login-form></login-form>`)
 
 // storiesOf(`Demo`, module)
 // 	.add(`heading`, () => `<h1>Hello World</h1>`)

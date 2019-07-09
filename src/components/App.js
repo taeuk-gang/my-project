@@ -6,7 +6,7 @@ import {
 	getData,
 } from '../libs/actions'
 
-import './exam-element.js'
+import './login-form.js'
 
 class AppMain extends LitRender(HTMLElement) {
 	constructor() {
@@ -29,7 +29,7 @@ class AppMain extends LitRender(HTMLElement) {
 		return html` 
 		${style}
 		<main>
-			<exam-element />			
+			<login-form />		
 		</main>
         `
 	}
@@ -48,7 +48,7 @@ main {
 	-ms-flex-align: center;
 	align-items: center;
 	width: 95vw;
-	height: 95vh;
+	height: 98vh;
 	margin: auto;
 }
 </style>
