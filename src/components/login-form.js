@@ -1,6 +1,7 @@
 import { html } from 'lit-html'
 
 import LitRender from '../libs/litRender'
+import { signup } from '../libs/actions'
 
 export class LoginForm extends LitRender(HTMLElement) {
 	constructor() {
@@ -11,28 +12,46 @@ export class LoginForm extends LitRender(HTMLElement) {
 		this.attachShadow({ mode: `open` })
 		this.invalidate(true)
 	}
+  
+	connectedCallback() {
+		const root = this.shadowRoot
+		const handlers = this._handlers
+
+		handlers.onClick = this._onClick.bind(this)				
+		
+		root.querySelector(`.sign-in-form-button`).addEventListener(`click`, handlers.onClick)
+	}
+
+	disconnectedCallback() {
+		const root = this.shadowRoot
+
+		root.querySelector(`.sign-in-form-button`).removeEventListener(`click`, this._handlers.onClick)
+	}
+  
+	_onClick() {
+		const id = this.shadowRoot.querySelector(`.sign-in-form-username`).value
+		const pwd = this.shadowRoot.querySelector(`.sign-in-form-password`).value
+		signup(id, pwd)
+	}
 
 	render() {
 		return html`
-		${style}
-    	<form>
-            <div class="sign-in-form">
-                <h4 class="text-center">Sign In</h4>
-                <label for="sign-in-form-username">Username</label>
-                <input type="text" class="sign-in-form-username" id="sign-in-form-username" placeholder="ID"/>
-                <label for="sign-in-form-password">Password</label>
-                <input type="text" class="sign-in-form-password" id="sign-in-form-password" placeholder="PW"/>
-                <button type="submit" class="sign-in-form-button">Sign In</button>
-            </div>
-        </form>
-    	`
+    <link rel="stylesheet" type="text/css" href="/src/css/foundation.min.css">
+    ${style}
+    <div class="sign-in-form">
+        <h4 class="text-center">Sign In</h4>
+        <label for="sign-in-form-username">Username</label>
+        <input type="text" class="sign-in-form-username" id="sign-in-form-username" placeholder="ID"/>
+        <label for="sign-in-form-password">Password</label>
+        <input type="password" class="sign-in-form-password" id="sign-in-form-password" placeholder="PW"/>
+        <button type="submit" class="sign-in-form-button">Sign In</button>
+    </div>
+    `
 	}
 }
 
 const style = html`
 <style>
-@import url(/src/css/foundation.min.css);
-
 .sign-in-form {
   padding: 1rem 1.5em;
   border-radius: .5rem;
