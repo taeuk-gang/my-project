@@ -1,7 +1,7 @@
 import './components/App.js'
 import './components/Login.js'
 
-export default class Main {
+export class Main {
 	static init() {
 		this.loadingDOM()
 
@@ -79,7 +79,7 @@ export default class Main {
 			},
 			pushUrl() {
 				if (isContinue) {	
-					Main._onLoad(() => history.pushState({}, null, path))					
+					Main._onLoad(() => history.pushState({}, null, path))
 				}
 			},
 		}
@@ -94,29 +94,38 @@ export default class Main {
 	static loadingDOM() {
 		const root = document.querySelector(`main`)
 		const loading = document.createElement(`div`)
-		const FIVE = 5
 				
 		this.emptyDOM()
 		loading.classList.add(`loading`)
-		for (let i=0; i < FIVE; i++) {
+		for (let i=0; i < 5; i++) {
 			loading.appendChild(document.createElement(`span`))
 		}
 		root.appendChild(loading)
 	}
 
-	static renderPage(pageName, path) {
+	static renderPage(pageName, path) {		
 		this.emptyDOM()
 		const pageElement = document.createElement(pageName)
 		document.querySelector(`main`).appendChild(pageElement)
 		history.pushState({}, pageName, path)
-	}
+	}	
 
 	static emptyDOM() {
-		document.querySelector(`main`).innerHTML = ``
+		document.querySelector(`main`).innerHTML = ``	
 	}
 
 	static exceptDOM() {
 		document.querySelector(`main`).innerHTML = `No Route`
+	}
+
+	static renderWaitMain(callback) {
+		if (document.querySelector(`main`)) {
+			callback()
+		} else {
+			Main._onLoad(() => {
+				callback()
+			})		
+		}		
 	}
 }
 

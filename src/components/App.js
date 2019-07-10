@@ -38,7 +38,7 @@ class AppMain extends LitRender(HTMLElement) {
 
 	render() {
 		return html` 
-    <link rel="stylesheet" type="text/css" href="/src/css/foundation.min.css">
+    	<link rel="stylesheet" type="text/css" href="/src/css/foundation.min.css">
 		${style}
 		<div class="page-main">
 			<div class="hero-full-screen">

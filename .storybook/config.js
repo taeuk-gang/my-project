@@ -8,6 +8,7 @@ function loadStories() {
   document.body.style.alignItems = `center`;
   document.body.style.margin = `0`;
   document.body.style.height = `100vh`;
+  document.body.appendChild(document.createElement(`main`))
   req.keys().forEach(filename => req(filename));
 }
 

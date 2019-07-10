@@ -4,7 +4,7 @@ import LitRender from '../libs/litRender'
 
 import './login-form.js'
 
-class LoginMain extends LitRender(HTMLElement) {
+export class LoginMain extends LitRender(HTMLElement) {
 	constructor() {
 		super()
 

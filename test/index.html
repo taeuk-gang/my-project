@@ -9,12 +9,25 @@
   <script src="../node_modules/wct-mocha/wct-mocha.js"></script> 
 </head>
 <body>
-    <exam-element></exam-element>
+    <main></main>    
     <script type="module">
-    import {ExamElement} from '../src/components/exam-element.js';
-    suite('<exam-element />', () => {
+    import '../src/components/App.js';
+    import '../src/components/Login.js';
+
+    suite('<app-main />', () => {
         test('is existed', () => {
-            const element = document.querySelector('exam-element');
+            const element = document.createElement('app-main');
+            if (element.shadowRoot) {
+                console.info(`success`);
+            } else {
+                console.error(`fail`);
+            }
+        });
+    });
+
+    suite('<login-main />', () => {
+        test('is existed', () => {
+            const element = document.createElement('login-main');
             if (element.shadowRoot) {
                 console.info(`success`);
             } else {
