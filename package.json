@@ -1,6 +1,6 @@
 {
   "name": "my-project",
-  "version": "1.0.2",
+  "version": "1.0.8",
   "description": "default project files",
   "main": "webpack.config.js",
   "dependencies": {
@@ -54,7 +54,7 @@
     "dev": "./node_modules/.bin/webpack-dev-server --hot",
     "production": "./node_modules/.bin/webpack -p --optimize-minimize",
     "bundle": "./node_modules/.bin/webpack --hide-modules --colors --mode=none",
-    "deploy": "rm -rf ./server/* && cp -rf ./index.html ./server && cp -rf ./main-bundle.js ./server/ && cp -rf ./index.css ./server && cd server && mkdir src && cd src && cd ../../ && cp -rf ./src/css ./server/src/",
+    "deploy": "npm run production && rm -rf ./server/* && cp -rf ./index.html ./server && cp -rf ./main-bundle.js ./server/ && cp -rf ./index.css ./server && cd server && mkdir src && cd src && cd ../../ && cp -rf ./src/css ./server/src/",
     "watch": "./node_modules/.bin/webpack --hide-modules --colors --mode=none --watch",
     "storybook": "./node_modules/.bin/start-storybook -p 9001 -s ./",
     "build-storybook": "./node_modules/.bin/build-storybook",
