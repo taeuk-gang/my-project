@@ -5,8 +5,20 @@
     <meta charset="UTF-8"/>
     <title>My project</title>
     <meta name="description" content="나의 기본이 되는 프로젝트 구조 설정" />
-    <link rel="stylesheet" type="text/css" href="./index.css">    
-        
+    <link rel="stylesheet" type="text/css" href="./index.css">
+    <link rel="stylesheet" type="text/css" href="./src/css/foundation.min.css">        
+</head>
+<body>
+    <main>
+        <div class="loading">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>	
+    </main>    
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/7.4.4/polyfill.min.js"></script>
     <script src="https://unpkg.com/@webcomponents/webcomponentsjs@2.2.10/bundles/webcomponents-sd-ce-pf.js"></script>
     <script src="https://unpkg.com/@webcomponents/webcomponentsjs@2.2.10/custom-elements-es5-adapter.js"></script>    
@@ -28,9 +40,6 @@
     };
     firebase.initializeApp(firebaseConfig);
     </script>
-    <script src="./main-bundle.js" defer></script>
-</head>
-<body>
-    <app-main></app-main>    
+    <script src="./main-bundle.js"></script>
 </body>
 </html>
