@@ -1,3 +1,4 @@
+import './libs/i18n.js'
 import './components/page-main.js'
 
 export class Main {

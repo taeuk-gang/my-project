@@ -19,10 +19,8 @@
 >
 >   - [ ] 나중에 도메인 연결시 Proxy 설정
 >   - [x] Git pages 기능 사용
-> - [x] 커스텀 엘리먼트 + Proxy() 를 이용한 가상 엘리먼트 VanilaJS 프로젝트 구성
->
->   - [참고1](https://dev-momo.tistory.com/entry/javascript-ES6-Proxy), [참고2](https://stackblitz.com/edit/2-way-bind-exapmle?file=index.js), [참고3](https://meetup.toast.com/posts/158)
->   - [x] 자동 배포 및 빌드 환경 구축 - Travis CI (서버가 필요없는 CI 환경 구성)
+> - [x] 커스텀 엘리먼트 + Proxy() 를 이용한 가상 엘리먼트 VanilaJS 프로젝트 구성 ([참고1](https://dev-momo.tistory.com/entry/javascript-ES6-Proxy), [참고2](https://stackblitz.com/edit/2-way-bind-exapmle?file=index.js), [참고3](https://meetup.toast.com/posts/158))
+> - [x] 자동 배포 및 빌드 환경 구축 - Travis CI (서버가 필요없는 CI 환경 구성)
 > - [x] 브라우저 호환성 검사하기 - [참고사이트](https://caniuse.com/#feat=shadowdomv1)
 >   - [x] README.MD에 FlowChart, Mermaid 사용하기 - [참고](https://baemincheon.tistory.com/29)
 > - [ ] 라우팅 관리하기 - [참고사이트](https://poiemaweb.com/js-spa) -필수(2)

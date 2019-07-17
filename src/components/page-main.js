@@ -1,6 +1,7 @@
 import { html } from 'lit-html'
 
 import LitRender from '../libs/litRender'
+import i18next from 'i18next'
 
 export class PageMain extends LitRender(HTMLElement) {
 	constructor() {
@@ -15,7 +16,7 @@ export class PageMain extends LitRender(HTMLElement) {
 		return html` 
 		${style}
 		<div id="pageMain">			
-			INIT
+			${i18next.t(`APP_NAME`)}
         </div>
         `
 	}
