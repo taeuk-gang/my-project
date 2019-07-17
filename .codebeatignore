@@ -4,4 +4,6 @@ modules-bundle.js
 redux-zero.js
 src/libs/redux-zero.js
 public/
+public/*
+public/main-bundle.js
 src/components/exam-element.js
