@@ -1,10 +1,9 @@
 import { storiesOf } from '@storybook/polymer'
 // import { document } from 'global'
-import '../components/App.js'
-  
-storiesOf(`App`, module)
-	.add(`app-main`, () => `<app-main></app-main>`)
-	.add(`exam-element`, () => `<exam-element></exam-element>`)
+import '../components/page-main.js'
+
+storiesOf(`Page`, module)
+	.add(`page-main`, () => `<page-main></page-main>`)
 
 // storiesOf(`Demo`, module)
 // 	.add(`heading`, () => `<h1>Hello World</h1>`)

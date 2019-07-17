@@ -8,12 +8,13 @@
   },
   "functions": {
     "predeploy": [
-      "npm --prefix \"$RESOURCE_DIR\" run lint",
-      "npm run deploy"
+      "npm run production",
+      "npm --prefix \"$RESOURCE_DIR\" run lint"
     ]
   },
   "hosting": {
-    "public": "server",
+    "site": "taeuk-project",
+    "public": "public",
     "ignore": [
       "firebase.json",
       "**/.*",
