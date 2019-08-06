@@ -48,7 +48,7 @@ export const main = new class {
 		return this
 	}
 
-	// functions
+	// Functions
 
 	_onLoad(callback) {
 		window.addEventListener(`load`, () => {			
