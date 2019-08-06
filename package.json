@@ -1,6 +1,6 @@
 {
   "name": "my-project",
-  "version": "1.0.9",
+  "version": "1.1.0",
   "description": "default project files",
   "main": "webpack.config.js",
   "dependencies": {
@@ -70,7 +70,7 @@
     "url": "git+https://github.com/taeuk-gang/my-project.git"
   },
   "author": "taeuk.kang",
-  "license": "MIT",
+  "license": "Apache 2.0",
   "bugs": {
     "url": "https://github.com/taeuk-gang/my-project/issues"
   },

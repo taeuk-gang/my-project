@@ -1,51 +1,62 @@
 import './libs/i18n.js'
 import './components/page-main.js'
 
-export class Main {
-	static init() {
+export const main = new class {
+	constructor() {
+		this.path = location.pathname
+		this.isContinue = true
+	}
+
+	init() {
 		this.loadingDOM()
 
-		this.router()
-			.isRoute()
+		this.isRoute()
 			.otherwise()
 			.pushUrl()
 	}
 
-	static router() {
-		let path = location.pathname
-		let isContinue = true
-		if (path === `/`) {path = `/main`}		
-		return {
-			isRoute() {
-				if (isContinue) {
-					Main.renderPage(`page-${path.split(`/`)[1]}`, path)
-					isContinue = false
-				}
-				return this
-			},
-			otherwise() {
-				if (isContinue) {
-					Main._onLoad(() => history.replaceState({}, null, `/main`))
-					Main.renderPage(`page-main`, path)
-					isContinue = false
-				}
-				return this
-			},
-			pushUrl() {
-				if (isContinue) {	
-					Main._onLoad(() => history.pushState({}, null, path))
-				}
-			},
+	// Init functions
+
+	isRoute() {
+		if (!this.isContinue) {
+			return this
 		}
+
+		const pathName = this.path.split(`/`)[1] || `main`
+		this.renderPage(`page-${pathName}`, this.path)
+		this.isContinue = false
+		return this
 	}
 
-	static _onLoad(callback) {
+	otherwise() {
+		if (!this.isContinue) {
+			return this
+		}
+
+		this._onLoad(() => history.replaceState({}, null, `/`))
+		this.renderPage(`page-main`, this.path)
+		this.isContinue = false
+		return this
+	}
+
+	pushUrl() {
+		if(!this.isContinue) {
+			return this
+		}
+
+		this._onLoad(() => history.pushState({}, null, this.path))
+		return this
+	}
+
+	// functions
+
+	_onLoad(callback) {
 		window.addEventListener(`load`, () => {			
 			callback()
 		})
 	}
 
-	static loadingDOM() {
+	loadingDOM() {
 		const root = document.querySelector(`main`)
 		const loading = document.createElement(`div`)
 				
@@ -57,30 +68,16 @@ export class Main {
 		root.appendChild(loading)
 	}
 
-	static renderPage(pageName, path) {		
+	renderPage(pageName, path) {		
 		this.emptyDOM()
 		const pageElement = document.createElement(pageName)
 		document.querySelector(`main`).appendChild(pageElement)
 		history.pushState({}, pageName, path)
 	}	
 
-	static emptyDOM() {
+	emptyDOM() {
 		document.querySelector(`main`).innerHTML = ``	
-	}
-
-	static exceptDOM() {
-		document.querySelector(`main`).innerHTML = `No Route`
-	}
-
-	static renderWaitMain(callback) {
-		if (document.querySelector(`main`)) {
-			callback()
-		} else {
-			Main._onLoad(() => {
-				callback()
-			})		
-		}		
 	}
 }
 
-Main.init()
+main.init()
