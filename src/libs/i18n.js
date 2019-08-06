@@ -3,7 +3,7 @@ import locale_ko from '../_locale/ko.js'
 
 i18next.init({
 	lng: `ko`,
-	debug: true,
+	debug: false,
 	resources: {
 		ko: {
 			translation: locale_ko,
