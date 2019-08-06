@@ -1,5 +1,4 @@
 import store from './store'
-// import { render } from 'lit-html'
 import { Main } from '../main.js'
 
 function actionCreator(action) {
@@ -116,59 +115,3 @@ export const get = actionCreator((state, url) => new Promise((resolve, reject) =
 		}
 	}
 }))
-
-// ===================================================== Example
-
-// export const route = actionCreator((state, _route) => {
-// 	state.route = _route
-
-// 	return state
-// })
-
-export const add = actionCreator((state, todo) => {
-	state.todoList.push({
-		title: todo,
-		completed: false,
-		id: `item-xxxxxxxxxxxx`.replace(/[x]/g, () => {
-			const r = Math.random() * 16 | 0
-
-			return r.toString(16)
-		}),
-	})
-
-	return state
-})
-
-export const remove = actionCreator((state, id) => {
-	state.todoList = state.todoList.filter(todo => todo.id !== id)
-
-	return state
-})
-
-export const toggle = actionCreator((state, id) => {
-	const todo = state.todoList.find(_todo => _todo.id === id)
-	todo.completed = !todo.completed
-
-	return state
-})
-
-export const replace = actionCreator((state, id, title) => {
-	const todo = state.todoList.find(_todo => _todo.id === id)
-	todo.title = title
-
-	return state
-})
-
-export const toggleAll = actionCreator((state, completed) => {
-	state.todoList.forEach(_todo => {
-		_todo.completed = completed
-	})
-
-	return state
-})
-
-export const clearCompleted = actionCreator(state => {
-	state.todoList = state.todoList.filter(todo => !todo.completed)
-
-	return state
-})
