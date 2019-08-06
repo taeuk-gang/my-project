@@ -31,7 +31,7 @@
 >   - [x] 서버리스 프로그래밍하기 - Google Cloud Functions -필수(1)
 > - [x] 오픈소스로 만들 것 (오픈소스에 대한 이해 필요) - [참고](https://janelia-flyem.github.io/licenses.html)
 > - [x] 문서화 양식 제작
-> - [ ] i18n - 다국어처리
+> - [x] i18n - 다국어처리
 > - [ ] Foundation 프레임워크 사용
 > - [ ] FE 가이드를 참고하기
 > - [ ] Clean code -javascript 참고하기
