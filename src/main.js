@@ -10,42 +10,25 @@ export const main = new class {
 	init() {
 		this.loadingDOM()
 
-		this.isRoute()
-			.otherwise()
-			.pushUrl()
+		this.connectRoute()
 	}
 
 	// Init functions
 
-	isRoute() {
-		if (!this.isContinue) {
-			return this
-		}
-
+	connectRoute() {
 		const pathName = this.path.split(`/`)[1] || `main`
-		this.renderPage(`page-${pathName}`, this.path)
-		this.isContinue = false
-		return this
+		const isRoute = [`login`]
+
+		if (isRoute.includes(pathName)) {
+			this.renderPage(`page-${pathName}`, this.path)
+			return
+		}
+		this.otherwise()
 	}
 
 	otherwise() {
-		if (!this.isContinue) {
-			return this
-		}
-
 		this._onLoad(() => history.replaceState({}, null, `/`))
 		this.renderPage(`page-main`, this.path)
-		this.isContinue = false
-		return this
-	}
-
-	pushUrl() {
-		if(!this.isContinue) {
-			return this
-		}
-
-		this._onLoad(() => history.pushState({}, null, this.path))
-		return this
 	}
 
 	// Functions
@@ -77,7 +60,7 @@ export const main = new class {
 
 	emptyDOM() {
 		document.querySelector(`main`).innerHTML = ``	
-	}
+	}	
 }
 
 main.init()
