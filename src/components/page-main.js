@@ -13,22 +13,13 @@ export class PageMain extends LitRender(HTMLElement) {
 	}
 
 	render() {
-		return html` 
-		${style}
+		return html`
+		<link rel="stylesheet" type="text/css" href="/src/css/style.css">
 		<div id="pageMain">			
 			${i18next.t(`APP_NAME`)}
         </div>
         `
 	}
 }
-
-const style = html`
-<style>	
-#pageMain {
-	display: grid;
-	margin: 0 auto;
-}
-</style>
-`
 
 customElements.define(`page-main`, PageMain)

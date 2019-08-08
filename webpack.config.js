@@ -1,13 +1,17 @@
 const path = require(`path`)
+const MiniCssExtractPlugin = require(`mini-css-extract-plugin`)
 
 module.exports = {
 	entry: {
-		"main-bundle": [`./src/main.js`],
+		"main-bundle": [`./src/main.js`, `./src/scss/main.scss`],
 	},
 	output: {
 		path: path.resolve(__dirname, `./public`),
 		filename: `[name].js`,
 	},
+	plugins: [
+		new MiniCssExtractPlugin({ filename: `src/css/style.css` }),
+	],
 	module: {
 		rules: [
 			{
@@ -26,11 +30,19 @@ module.exports = {
 				use: [`eslint-loader`],
 			},
 			{
-				test: /\.css$/,
-				use: [`style-loader`, `css-loader`, `postcss-loader`],
+				test: /\.(css|scss)$/,
+				exclude: /node_modules/,
+				use: [
+					MiniCssExtractPlugin.loader, 
+					/* `style-loader`, */ 
+					`css-loader`, 
+					`sass-loader?outputStyle=expanded`,
+					`postcss-loader`,
+				],
 			},
 			{
 				test: /\.(png|svg|jpe?g|gif)$/,
+				exclude: /node_modules/,
 				loader: `file-loader`,
 				options: {
 					publicPath: `/src/`,
@@ -39,6 +51,7 @@ module.exports = {
 			},
 			{
 				test: /\.(png|svg|jpe?g|gif)$/,
+				exclude: /node_modules/,
 				loader: `url-loader`,
 				options: {
 					publicPath: `/src/`,
