@@ -38,7 +38,7 @@
 > - [ ] Clean code -javascript 참고하기
 > - [ ] Toast UI 가이드 참고하기
 > - [x] PostCss - Autoprefixer 연결하기
->     - [ ] 번들링시, 자동
+>     - [x] 번들링시, 자동
 > - [ ] Docker 사용
 >     - [ ] 깃허브 연결법 조사
 > - [x] SCSS 사용하기
