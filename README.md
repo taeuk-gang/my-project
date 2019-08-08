@@ -33,16 +33,20 @@
 > - [x] 문서화 양식 제작
 > - [x] i18n - 다국어처리
 > - [ ] Foundation 프레임워크 사용
+>     - [ ] 이건 굳이 안사용 될 것 같은 느낌도 있음
 > - [ ] FE 가이드를 참고하기
 > - [ ] Clean code -javascript 참고하기
 > - [ ] Toast UI 가이드 참고하기
 > - [x] PostCss - Autoprefixer 연결하기
+>     - [ ] 번들링시, 자동
+> - [ ] Docker 사용
+>     - [ ] 깃허브 연결법 조사
+> - [x] SCSS 사용하기
 >
 > --------------------
 >
 > #### 깃허브에서 하기 힘든 것
 >
->   - [ ] Docker 사용
 >  - [ ] 쿠버네틱스가 사용 가능한가?
 >   - [ ] SOP 회피하기 - CROS 고려 - [Heroku로 프록시 우회 서버 만들기](https://github.com/Rob--W/cors-anywhere)
 
