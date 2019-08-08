@@ -1,5 +1,5 @@
 import './libs/i18n.js'
-import './components/page-main.js'
+import './pages/page-main.js'
 
 export const main = new class {
 	constructor() {
