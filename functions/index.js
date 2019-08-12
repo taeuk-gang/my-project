@@ -1,40 +1,41 @@
 const functions = require(`firebase-functions`)
 const admin = require(`firebase-admin`)
+const express = require(`express`)
+const cors = require(`cors`)
 
 admin.initializeApp(functions.config().firebase)
 
-const cors = require(`cors`)({
-	origin: true,
-})
+const app = express()
 
+const whiteList = [`https://taeuk-project.web.app`, `localhost`]
 
-exports.isAdmin = functions.https.onRequest((request, response) => {
-	cors(request, response, () => {
-		const crypto = require(`crypto`)	
-		crypto.pbkdf2(request.body.password, functions.config().admin.salt, 100000, 64, `sha512`, (err, key) => {
-			if (err) {
-				console.error(err)
-			}
-	
-			if (!isCorrectID()) {
-				response.json({
-					result: false,
-				})
-			}
-			
-			response.json({
-				result: functions.config().admin.hashpwd === key.toString(`base64`),
-			})
-		})
-	})
-	
-	function isCorrectID() {
-		return request.body.id === functions.config().admin.id
+app.use(cors({
+	origin: (origin, callback) => {
+		if (whiteList.indexOf(origin) === -1) {
+			callback(null, true)
+		} else {
+			callback(new Error(`Not allowed by CORS`))
+		}
+	},
+}))
+
+app.get(`/test`, (req, res) => {
+	if (!req.xhr) {
+		res.send(`ONLY REQUEST AJAX`)
 	}
+    
+	res.send(`TEST CODE`)
 })
 
-exports.isLogin = functions.https.onRequest((request, response) => {
-	cors(request, response, () => {
+exports.server = functions.https.onRequest(app)
 
-	})
-})
+/* Firebase */
+// const cors = require(`cors`)({
+// 	origin: true,
+// })
+
+// exports.func = functions.https.onRequest((request, response) => {
+// 	cors(request, response, () => {
+
+// 	})
+// })
