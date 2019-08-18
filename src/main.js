@@ -8,12 +8,26 @@ export const main = new class {
 	}
 
 	init() {
+		this.firebaseInit()
+		
 		this.loadingDOM()
 
 		this.connectRoute()
 	}
 
 	// Init functions
+
+	firebaseInit() {
+		firebase.initializeApp({
+			apiKey: `AIzaSyALQwyOdDBBZQsqh0IBnu8DfmlgPOnbIOU`,
+			authDomain: `taeuk-project.firebaseapp.com`,
+			databaseURL: `https://taeuk-project.firebaseio.com`,
+			projectId: `taeuk-project`,
+			storageBucket: `taeuk-project.appspot.com`,
+			messagingSenderId: `1039842449748`,
+			appId: `1:1039842449748:web:9e2e73fdbd4ec509`,
+		})
+	}
 
 	connectRoute() {
 		const pathName = this.path.split(`/`)[1] || `main`
