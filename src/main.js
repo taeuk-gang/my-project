@@ -1,4 +1,6 @@
 import './libs/i18n.js'
+import store from './libs/store.js'
+
 import './pages/page-main.js'
 
 export const main = new class {
@@ -9,8 +11,6 @@ export const main = new class {
 
 	init() {
 		this.firebaseInit()
-		
-		this.loadingDOM()
 
 		this.connectRoute()
 	}
@@ -29,12 +29,11 @@ export const main = new class {
 		})
 	}
 
-	connectRoute() {
-		const pathName = this.path.split(`/`)[1] || `main`
-		const isRoute = [`login`]
+	connectRoute(pathName = this.path.split(`/`)[1] || `main`) {
+		const isRoute = () => Object.keys(store.getState().router).includes(pathName)
 
-		if (isRoute.includes(pathName)) {
-			this.renderPage(`page-${pathName}`, this.path)
+		if (isRoute()) {
+			this.renderPage(`page-${pathName}`, `/${this.pathName}`)
 			return
 		}
 		this.otherwise()
@@ -42,7 +41,7 @@ export const main = new class {
 
 	otherwise() {
 		this._onLoad(() => history.replaceState({}, null, `/`))
-		this.renderPage(`page-main`, this.path)
+		this.renderPage(`page-main`, `/`)
 	}
 
 	// Functions
@@ -74,7 +73,11 @@ export const main = new class {
 
 	emptyDOM() {
 		document.querySelector(`main`).innerHTML = ``	
-	}	
+	}
+
+	isIE() {		
+		return navigator.userAgent.includes(`Trident`) || navigator.userAgent.includes(`MSIE`)
+	}
 }
 
 main.init()
