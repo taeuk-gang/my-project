@@ -7,6 +7,7 @@ node_modules
 main-bundle.js
 *-bundle.js
 public/main-bundle.js
+deploy/
 
 # build
 dist/
