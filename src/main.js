@@ -10,7 +10,7 @@ export const main = new class {
 	}
 
 	init() {
-		this.firebaseInit()
+		// this.firebaseInit()
 
 		this.connectRoute()
 	}
@@ -53,26 +53,24 @@ export const main = new class {
 	}
 
 	loadingDOM() {
-		const root = document.querySelector(`main`)
+		const root = document.querySelector(`#root`)
 		const loading = document.createElement(`div`)
+		loading.textContent = `로딩 중...`
 				
 		this.emptyDOM()
 		loading.classList.add(`loading`)
-		for (let i=0; i < 5; i++) {
-			loading.appendChild(document.createElement(`span`))
-		}
 		root.appendChild(loading)
 	}
 
 	renderPage(pageName, path) {		
 		this.emptyDOM()
 		const pageElement = document.createElement(pageName)
-		document.querySelector(`main`).appendChild(pageElement)
+		document.querySelector(`#root`).appendChild(pageElement)
 		history.pushState({}, pageName, path)
 	}	
 
 	emptyDOM() {
-		document.querySelector(`main`).innerHTML = ``	
+		document.querySelector(`#root`).innerHTML = ``	
 	}
 
 	isIE() {		

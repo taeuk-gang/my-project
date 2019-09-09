@@ -6,4 +6,6 @@ src/libs/redux-zero.js
 public/
 public/*
 public/main-bundle.js
+deploy
+deploy/*
 src/components/exam-element.js

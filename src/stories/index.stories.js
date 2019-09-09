@@ -1,6 +1,7 @@
 import { storiesOf } from '@storybook/polymer'
-// import { document } from 'global'
-import '../components/page-main.js'
+import { document } from 'global'
+import '../libs/i18n.js'
+import '../pages/page-main.js'
 
 storiesOf(`Page`, module)
 	.add(`page-main`, () => `<page-main></page-main>`)
