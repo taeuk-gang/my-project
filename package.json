@@ -39,7 +39,7 @@
     "chai": "^4.2.0",
     "clang-format": "^1.2.4",
     "css-loader": "^3.2.0",
-    "jsdom": "15.1.1",
+    "jsdom": "16.5.0",
     "jsdom-global": "3.0.2",
     "lit-html-benchmarks": "^0.2.1",
     "mini-css-extract-plugin": "^0.8.0",
